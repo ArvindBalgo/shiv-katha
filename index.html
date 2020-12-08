@@ -94,11 +94,14 @@
 
 	<script src="common-js/scripts.js"></script>
 	<script>
+		var clickedOnce = false;
 		setTimeout(() => {
 			document.querySelector('.overlay').addEventListener('click', () => {
-				console.log('click')
-				var audio = new Audio('music/tandav.mp3');
-				audio.play();
+				if(!clickedOnce) {
+					var audio = new Audio('music/tandav.mp3');
+					audio.play();
+					clickedOnce = true;
+				}
 			})
 		}, 200)
 	</script>
