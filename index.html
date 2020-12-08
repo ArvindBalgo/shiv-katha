@@ -29,9 +29,9 @@
 	
 </head>
 <body>
-<audio autoplay loop controls>
+<!--<audio autoplay loop controls>
 	<source src="music/tandav.mp3"  type="audio/mpeg"/>
-</audio>
+</audio>-->
 	<div class="main-area">
 		
 		<section class="left-section" style="background-image: url(images/countdown-1-1000x1000.jpg)">
@@ -92,6 +92,11 @@
 	<script src="common-js/jquery.throttle.js"></script>
 
 	<script src="common-js/scripts.js"></script>
-	
+	<script>
+		setTimeout(() => {
+			var audio = new Audio('music/tandav.mp3');
+			audio.play();
+		}, 200)
+	</script>
 </body>
 </html>
